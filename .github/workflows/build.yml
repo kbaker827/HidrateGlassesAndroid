@@ -34,11 +34,15 @@ jobs:
           echo "ROKID_CLIENT_SECRET=${{ secrets.ROKID_CLIENT_SECRET }}" >> local.properties
 
       - name: Build Debug APK
-        run: gradle assembleDebug --no-daemon --info 2>&1 | tail -100
+        run: gradle assembleDebug --no-daemon
+
+      - name: Find APK
+        run: find . -name "*.apk" -not -path "*/intermediates/*" | tee apk-paths.txt
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
           name: HidrateGlasses-debug
-          path: app/build/outputs/apk/debug/*.apk
+          path: "**/*.apk"
+          if-no-files-found: warn
           retention-days: 30
