@@ -5,8 +5,8 @@ import android.content.Context
 import android.util.Log
 import com.hidrateglasses.BuildConfig
 import com.hidrateglasses.data.models.HydrationData
+import com.rokid.cxr.client.extend.BluetoothStatusCallback
 import com.rokid.cxr.client.extend.CxrApi
-import com.rokid.cxr.client.extend.CxrBluetoothErrorCode
 import com.rokid.cxr.client.extend.CxrStatus
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
@@ -93,7 +93,7 @@ class RokidGlassesManager @Inject constructor(
      */
     fun connect(device: BluetoothDevice) {
         Log.d(TAG, "connect: ${device.address}")
-        CxrApi.getInstance().initBluetooth(context, device) { status ->
+        CxrApi.getInstance().initBluetooth(context, device, BluetoothStatusCallback { status ->
             Log.d(TAG, "CxrStatus: $status")
             when (status) {
                 CxrStatus.BLUETOOTH_AVAILABLE -> {
@@ -112,7 +112,7 @@ class RokidGlassesManager @Inject constructor(
                     hudOpen = false
                 }
             }
-        }
+        })
     }
 
     /**
@@ -134,7 +134,7 @@ class RokidGlassesManager @Inject constructor(
             context,
             socketUuid,
             macAddress,
-            { status ->
+            BluetoothStatusCallback { status ->
                 Log.d(TAG, "CxrStatus (reconnect): $status")
                 when (status) {
                     CxrStatus.BLUETOOTH_AVAILABLE -> {
