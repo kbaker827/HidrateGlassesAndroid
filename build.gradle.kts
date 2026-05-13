@@ -5,9 +5,3 @@ plugins {
     alias(libs.plugins.hilt.android) apply false
 }
 
-// Expose the Rokid Maven repository to all subprojects
-allprojects {
-    repositories {
-        maven { url = uri("https://maven.rokid.com/repository/maven-public/") }
-    }
-}
