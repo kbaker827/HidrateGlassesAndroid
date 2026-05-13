@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme — Material3 / DayNight. -->
+    <style name="Theme.HidrateGlasses" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/blue_40</item>
+        <item name="colorOnPrimary">@color/grey_99</item>
+        <item name="colorPrimaryContainer">@color/blue_90</item>
+        <item name="colorOnPrimaryContainer">@color/blue_10</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/teal_40</item>
+        <item name="colorOnSecondary">@color/grey_99</item>
+        <item name="colorSecondaryContainer">@color/teal_90</item>
+        <item name="colorOnSecondaryContainer">@color/teal_20</item>
+
+        <!-- Error -->
+        <item name="colorError">@color/red_40</item>
+        <item name="colorOnError">@color/grey_99</item>
+        <item name="colorErrorContainer">@color/red_90</item>
+        <item name="colorOnErrorContainer">@color/red_10</item>
+
+        <!-- Background / Surface -->
+        <item name="android:colorBackground">@color/grey_99</item>
+        <item name="colorSurface">@color/grey_99</item>
+        <item name="colorOnSurface">@color/grey_10</item>
+
+        <!-- Status bar: transparent, let the Compose theme control colour -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Splash / launch theme (same base, avoids white flash) -->
+    <style name="Theme.HidrateGlasses.Splash" parent="Theme.HidrateGlasses">
+        <item name="android:windowBackground">@color/blue_40</item>
+    </style>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Fallback XML layout for the Rokid HUD overlay.
+  The actual drawing is done programmatically in RokidOverlayService.HudOverlayView (Canvas).
+  This file serves as a named reference and can be used as an alternative ConstraintLayout
+  root if a View-based approach is preferred over the fully custom-drawn view.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rokid_hud_root"
+    android:layout_width="220dp"
+    android:layout_height="220dp"
+    android:background="@drawable/rokid_hud_bg"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Progress ring is drawn entirely in Canvas via HudOverlayView -->
+
+</FrameLayout>

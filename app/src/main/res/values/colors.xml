@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary blue palette -->
+    <color name="blue_10">#FF001F33</color>
+    <color name="blue_20">#FF003D66</color>
+    <color name="blue_30">#FF005C99</color>
+    <color name="blue_40">#FF007ACC</color>
+    <color name="blue_80">#FF99D6FF</color>
+    <color name="blue_90">#FFCCEEFF</color>
+
+    <!-- Teal accent -->
+    <color name="teal_20">#FF003636</color>
+    <color name="teal_40">#FF006A6A</color>
+    <color name="teal_80">#FF4DD8D8</color>
+    <color name="teal_90">#FFAFF4F4</color>
+
+    <!-- Error red -->
+    <color name="red_10">#FF410002</color>
+    <color name="red_40">#FFBA1A1A</color>
+    <color name="red_80">#FFFFB4AB</color>
+    <color name="red_90">#FFFFB4AB</color>
+
+    <!-- Neutral grey -->
+    <color name="grey_10">#FF1A1C1E</color>
+    <color name="grey_20">#FF2F3033</color>
+    <color name="grey_90">#FFE2E2E6</color>
+    <color name="grey_99">#FFFBFBFF</color>
+
+    <!-- Overlay HUD background -->
+    <color name="hud_background">#C80A1428</color>
+    <color name="hud_progress">#FF00C8FF</color>
+    <color name="hud_track">#4064B4F5</color>
+</resources>

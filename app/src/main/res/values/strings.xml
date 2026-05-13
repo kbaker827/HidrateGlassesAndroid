@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HidrateGlasses</string>
+
+    <!-- Home screen -->
+    <string name="label_today_oz">Today</string>
+    <string name="label_goal_oz">Goal</string>
+    <string name="label_temperature">Temperature</string>
+    <string name="label_battery">Battery</string>
+    <string name="label_last_drink">Last Drink</string>
+    <string name="label_remaining">Remaining</string>
+    <string name="action_sync">Sync</string>
+    <string name="action_scan">Scan for Bottle</string>
+
+    <!-- Rokid -->
+    <string name="label_rokid_overlay">Floating HUD Overlay</string>
+    <string name="label_rokid_presentation">Rokid Glasses Display</string>
+    <string name="desc_rokid_overlay">Shows hydration HUD over all apps</string>
+    <string name="desc_rokid_presentation">Renders full HUD on Rokid Max / Max Pro</string>
+
+    <!-- Notifications -->
+    <string name="notification_overlay_title">HidrateGlasses Active</string>
+    <string name="notification_overlay_text">Hydration HUD is running</string>
+    <string name="notification_reminder_title">Time to hydrate!</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_account">Account</string>
+    <string name="settings_daily_goal">Daily Goal</string>
+    <string name="settings_units">Units</string>
+    <string name="settings_notifications">Reminder Notifications</string>
+    <string name="action_sign_in">Sign In</string>
+    <string name="action_sign_out">Sign Out</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="label_oz">Fluid ounces (oz)</string>
+    <string name="label_ml">Milliliters (mL)</string>
+
+    <!-- History -->
+    <string name="history_title">Drink History</string>
+    <string name="history_empty">No drink history yet</string>
+
+    <!-- BLE -->
+    <string name="ble_connected">Connected</string>
+    <string name="ble_disconnected">Disconnected</string>
+    <string name="ble_scanning">Scanning for HidrateSpark…</string>
+    <string name="ble_no_devices">No devices found. Make sure your bottle is awake.</string>
+</resources>
