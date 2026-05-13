@@ -5,6 +5,9 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -39,13 +42,19 @@ jobs:
       - name: Build Debug APK
         run: ./gradlew assembleDebug --no-daemon --stacktrace
 
-      - name: Find APK
-        run: find . -name "*.apk" -not -path "*/intermediates/*" | tee apk-paths.txt
+      - name: Get version name
+        id: version
+        run: |
+          SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
+          echo "tag=v$(date +'%Y%m%d')-${SHORT_SHA}" >> "$GITHUB_OUTPUT"
 
-      - name: Upload Debug APK
-        uses: actions/upload-artifact@v4
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: HidrateGlasses-debug
-          path: "**/*.apk"
-          if-no-files-found: warn
-          retention-days: 30
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: HidrateGlasses Debug ${{ steps.version.outputs.tag }}
+          body: |
+            Debug build from commit ${{ github.sha }}
+            Branch: ${{ github.ref_name }}
+          files: app/build/outputs/apk/debug/app-debug.apk
+          fail_on_unmatched_files: true
