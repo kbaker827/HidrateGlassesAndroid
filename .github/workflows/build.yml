@@ -34,7 +34,7 @@ jobs:
           echo "ROKID_CLIENT_SECRET=${{ secrets.ROKID_CLIENT_SECRET }}" >> local.properties
 
       - name: Build Debug APK
-        run: gradle assembleDebug --no-daemon
+        run: gradle assembleDebug --no-daemon --stacktrace
 
       - name: Find APK
         run: find . -name "*.apk" -not -path "*/intermediates/*" | tee apk-paths.txt
