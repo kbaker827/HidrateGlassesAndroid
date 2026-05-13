@@ -16,7 +16,6 @@ import com.hidrateglasses.MainActivity
 import com.hidrateglasses.data.models.HydrationData
 import com.hidrateglasses.data.repository.HydrationRepository
 import com.rokid.cxr.client.extend.CxrApi
-import com.rokid.cxr.client.extend.CxrStatus
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
